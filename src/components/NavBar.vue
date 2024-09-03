@@ -1,9 +1,7 @@
 <template lang="">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container px-4">
-      <a class="navbar-brand" href="#"
-        ><img src="../assets/img/logo.png" alt="logo de suricata"
-      /></a>
+      <a class="navbar-brand" href="#"><img src="../assets/logo.png" alt="logo de suricata" /></a>
       <button
         class="navbar-toggler navbar-dark border-light"
         type="button"
@@ -18,15 +16,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link text-light" href="#"
-              >Inicio <span class="sr-only">(current)</span></a
+            <RouterLink :to="{ name: 'inicio' }" class="nav-link text-light">Inicio</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink :to="{ name: 'productos' }" class="nav-link text-light"
+              >Productos</RouterLink
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Contacto</a>
+            <RouterLink :to="{ name: 'contacto' }" class="nav-link text-light">Contacto</RouterLink>
           </li>
         </ul>
       </div>
@@ -34,6 +32,7 @@
   </nav>
 </template>
 <script>
+// import { RouterLink } from 'vue-router'
 export default {}
 </script>
 <style scoped></style>
